@@ -26,19 +26,15 @@ def loose_change(cents):
             # use built-in divmod function to calculate quotient and remainder
             # calculate with QUARTERS
             div_quarters = divmod(cents, QUARTERS)
-            # set qaurters quantity
             quarters_qty = div_quarters[0]
             # calculate with DIMES
             div_dimes = divmod(div_quarters[1], DIMES)
-            # set dimes quantity
             dimes_qty = div_dimes[0]
             # calculate with NICKELS
             div_nickels = divmod(div_dimes[1], NICKELS)
-            # set nickels quantity
             nickels_qty = div_nickels[0]
             # calculate with PENNIES
             div_pennies= divmod(div_nickels[1], PENNIES)
-            # set pennies quantity
             pennies_qty = div_pennies[0]
             # confirm no remainder left
             if div_pennies[1] > 0:
